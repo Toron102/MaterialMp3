@@ -1,0 +1,7 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.bodybg{
+	-fx-background-image: url("file:///I:/eclipse%20workspace%2009/maven-archetype-Mp3/src/main/java/images/fast_forward_FILL1_wght400_GRAD0_opsz40.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}

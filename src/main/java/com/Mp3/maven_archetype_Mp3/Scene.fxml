@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="703.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Mp3.maven_archetype_Mp3.Controller">
+   <children>
+      <Label fx:id="songLabel" alignment="CENTER" prefHeight="93.0" prefWidth="703.0" text="MP3 PLAYER" textFill="#00bc3c">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Label>
+      <MFXProgressBar fx:id="songProgressBar" layoutY="93.0" prefHeight="26.0" prefWidth="703.0" progress="0.0" />
+      <MFXButton fx:id="playButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL3" ellipsisString="" layoutY="115.0" onAction="#playMedia" prefHeight="46.0" prefWidth="75.0" rippleColor="#007c17">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/play_circle_FILL1_wght400_GRAD0_opsz40.png" />
+               </image></ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="pauseButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL3" ellipsisString="" layoutX="75.0" layoutY="115.0" onAction="#pauseMedia" prefHeight="46.0" prefWidth="75.0" rippleColor="#007c17" text="Button">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/pause_FILL1_wght400_GRAD0_opsz40.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="resetButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL3" ellipsisString="" layoutX="150.0" layoutY="115.0" onAction="#resetMedia" prefHeight="46.0" prefWidth="75.0" rippleColor="#007c17">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/replay_FILL1_wght400_GRAD0_opsz40.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="previousButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL3" ellipsisString="" layoutX="225.0" layoutY="115.0" onAction="#previousMedia" prefHeight="46.0" prefWidth="75.0" rippleColor="#007c17" text="Button">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/skip_previous_FILL1_wght400_GRAD0_opsz40.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="nextButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL3" ellipsisString="" layoutX="300.0" layoutY="115.0" onAction="#nextMedia" prefHeight="46.0" prefWidth="75.0" rippleColor="#007c17" text="Button">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/skip_next_FILL1_wght400_GRAD0_opsz40.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXComboBox fx:id="speedBox" layoutX="375.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#changeSpeed" prefHeight="46.0" prefWidth="126.0" styleClass="bodybg" stylesheets="@application.css" />
+      <MFXSlider fx:id="volumeSlider" layoutX="506.0" layoutY="128.0" prefHeight="20.0" prefWidth="197.0" value="50.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="506.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="128.0" />
+   </children>
+</AnchorPane>
